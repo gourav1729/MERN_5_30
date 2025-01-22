@@ -62,7 +62,10 @@ Use `<br>` for line breaks.
 - `<meta charset="UTF-8">`: Supports special characters (e.g., accents, symbols).
 - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Ensures mobile responsiveness.
 ```
+```
+In HTML, UTF-8 is almost always the preferred encoding over UTF-16 because it is more efficient, uses less storage space, and is backwards compatible with ASCII, making it the standard choice for web pages; while UTF-16 may be used in specific situations where a large number of non-Latin characters are needed, it generally requires more bytes to represent the same characters as UTF-8, making it less space-efficient for most websites. 
 
+```
 ## 6. Practice Questions
 
 ### Activities for Students:
