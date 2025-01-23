@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    ### **1. What are Forms in HTML?**
+Forms are HTML elements that allow users to input and submit data to a server for processing. They are essential for creating interactive web applications. 
+
+### **Why Use Forms?**
+- To collect user information (e.g., name, email, password).
+- To allow user interaction (e.g., surveys, feedback, registrations).
+- To submit data to servers for storage, computation, or further processing.
+
+#### **Form Use Cases**
+- Login and Signup Forms
+- Feedback and Survey Forms
+- Payment and Checkout Forms
+- Search Bars
+- File Uploads
+
+
+
+
+-->
+
+
+<form action="">
+
+
+    <!-- <label for="username">Username</label>
+    <input type="text" id = "username" name = "username"> -->
+
+    <br>
+    <br>
+    
+    <!-- <label for="password">Password</label>
+    <input type="password" id = "password" name = "password">
+ -->
+
+    <!-- <label for="password">Password</label>
+    <input type="password" id = "password" name = "password">
+     -->
+    
+    <!-- <input type="week" id = "password" name = "password">
+    <input type="range" id = "password" name = "password">
+    <input type="password" id = "password" name = "password"> -->
+
+    <!-- <label for="search">search</label>
+    <input type="search" id = "search" name = "password">
+    <input type="tel" id = "search" name = "password"> -->
+
+
+    <!-- <form action=""  method="post"></form> -->
+
+    <!-- 2. **`method`**
+   - Defines the HTTP method used to send form data to the server.
+     - **GET**: Sends data appended to the URL as query parameters. Best for non-sensitive data like search queries.
+     - **POST**: Sends data in the request body, suitable for sensitive or large amounts of data like passwords or file uploads. -->
+
+     <!-- 3. **`autocomplete`**
+   - Enables or disables the browser's autofill functionality for form fields.
+     - **`on`** (default): Browser suggests previously entered values.
+     - **`off`**: Disables autofill for the form or specific fields. -->
+
+
+     <!-- <form action="/submit-data" method="get" autocomplete="off">
+
+        <input type="text" name="username" >
+        <button type = "submit">submit</button>
+     </form>
+
+
+     <form action="" method="get" autocomplete>
+        <input type="text">
+     </form> -->
+
+     <!-- <form action="/submit-data" method="post">
+
+        <input type="text" name="username" >
+        <button type = "submit">submit</button>
+     </form> -->
+
+     <!-- 1. **`_self` (Default)**
+     - Displays the form submission response in the same browser tab or window where the form was submitted.
+     - Best suited for workflows where the user should stay in the same browsing context. -->
+
+     <form action="/submit" target="_self">
+        <input type="text" name="username" placeholder="input1">
+        <button type="submit">Submit</button>
+      </form>
+
+
+     <!-- 2 . **`_blank`**
+   - Opens the form submission response in a new browser tab or window.
+   - Ideal for cases where the submitted form leads to additional information or actions that users may want to explore without losing their current page. -->
+ 
+
+     <form action="/submit" target="_blank">
+        <input type="text" name="search" placeholder="input2">
+        <button type="submit">Search</button>
+      </form>
+
+
+
+
+    
+
+</form>
+
+<!-- 1)BUTTON
+    2)CHECKBOXES
+    3)Single Select Dropdown AND  Multi-Select Dropdown
+-->
+
+<!-- 1. Create a login form with email and password inputs.
+2. Design a survey form with checkboxes and a textarea for feedback.
+3. Create a registration form with validation for email, phone, and password.
+4. Add file upload functionality to a feedback form.
+5. Design a form with grouped radio buttons and multi-select dropdowns. -->
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
