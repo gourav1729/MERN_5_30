@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- ### **Topics Covered:**
 1. Introduction to CSS Units
     - Absolute Units
@@ -25,7 +25,7 @@
 4. Interactive Exercises
     - Practical Tasks with `px` and Relative Units -->
 
-<!-- 
+    <!-- 
 ### **1. Introduction to CSS Units**
 
 #### **Absolute Units**
@@ -36,51 +36,84 @@
 - Flexible and adapt based on the parent or root element.
 - Common examples: `%`, `em`, `rem`, `vw`, `vh`. -->
 
-
-<!-- ### **2. Pixel (`px`) Unit**
+    <!-- ### **2. Pixel (`px`) Unit**
 
 #### **What is a Pixel?**
 - A pixel (`px`) is an absolute unit representing a single dot on the screen.
 - It provides precise control over dimensions, making it ideal for fixed layouts. -->
 
-
-<!-- <div style="width: 100px; height: 200px; background-color: red">
-
-    Fixed size box 
-</div> -->
-
-
-<!-- <div style="width: 200px; height: 200px; background-color: red">
+    <!-- <div style="width: 100px; height: 200px; background-color: red">
 
     Fixed size box 
 </div> -->
 
+    <!-- <div style="width: 200px; height: 200px; background-color: red">
 
-<!-- ### **3. Relative Units Overview**
+    Fixed size box 
+</div> -->
+
+    <!-- ### **3. Relative Units Overview**
 
 #### **`%` (Percentage)**
 
 #### **Percentage (`%`)**
 - Defines size relative to the parent element. -->
 
+    <div style="width: 50%; height: 100%; background-color: brown">hello</div>
+
+    <!-- em : Relative to the font size of the parent element. -->
+
+    <ul class="ems">
+      <li>One</li>
+      <li>Two</li>
+      <li>
+        Three
+        <ul>
+          <li>Three A</li>
+          <li>
+            Three B
+            <ul>
+              <li>Three B 2</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="rems">
+      <li>One</li>
+      <li>Two</li>
+      <li>
+        Three
+        <ul>
+          <li>Three A</li>
+          <li>
+            Three B
+            <ul>
+              <li>Three B 2</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- ### **Generic Font Families**
+      - These are broad categories of fonts provided by CSS.
+        - **serif**: Fonts with decorative lines (e.g., Times New Roman).
+        - **sans-serif**: Clean, modern fonts without decorative lines (e.g., Arial).
+        - **monospace**: Fixed-width fonts used for coding (e.g., Courier).
+      
 
 
-    <div style="width : 50%; height : 100%; background-color: brown;">
-        hello
-    </div>
+
+     -->
 
 
-
-    
-</body>
+     
+  </body>
 </html>
-
-
 
 <!-- Style a button with:
    - Rounded corners (10px radius).
    - Light blue background.
    - Bold text. -->
-
-
-
