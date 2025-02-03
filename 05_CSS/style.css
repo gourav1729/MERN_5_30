@@ -1,0 +1,57 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aqua;
+}
+
+h1{
+    background-color: red;
+}
+
+h3{
+    background-color: blue;
+}
+
+#login{
+    background-color: yellow;
+}
+
+#signup{
+    background-color: green;
+}
+
+.follow{
+    background-color: orange;
+}
+
+.upvote{
+
+    background-color: blueviolet;
+}
+
+p a{
+
+    color: purple;
+    text-decoration: line-through;
+}
+
+
+nav a {
+
+    color: white;
+}
+
+p h3{
+    background-color: pink;
+}
+
+p ::selection{
+    background-color:  red
+}
+
+
+
+
+
+
+
+
