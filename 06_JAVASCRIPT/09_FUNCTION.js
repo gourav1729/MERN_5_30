@@ -30,7 +30,7 @@
 // - Benefits:
 //      - Reduces redundancy.
 //      - Increases code clarity and maintainability.
-
+//      - 
 
 
 
@@ -56,7 +56,32 @@ function sum(a) {
 sum("hello")
 
 
-` `
+
+function name1(a, b) {
+    console.log(a+b)
+
+
+    
+}
+
+name1(10,20)
+name1(10,20)
+name1(10,20)
+name1(10,20)
+name1(10,20)
+
+// +, -, /, *, %
+
+
+//what are arrow function
+//what are higher ordere function
+
+
+
+
+
+
+
 
 
 
