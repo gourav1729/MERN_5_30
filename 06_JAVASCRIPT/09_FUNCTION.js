@@ -89,3 +89,24 @@ name1(10,20)
 // good eveeing ! name 
 
 
+
+
+// ## 3. Arrow Functions
+
+// ### What are Arrow Functions?
+// Arrow functions provide a concise syntax for writing functions. They use the `=>` syntax.
+
+// const add = (a, b) =>{ };
+
+
+
+// const internal = setInterval(() => {
+//     console.log("kristanshu")
+// },  1 )
+
+
+const hello = setTimeout(()=>{
+    console.log("hello")
+})
+
+

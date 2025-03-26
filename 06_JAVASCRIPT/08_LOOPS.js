@@ -79,7 +79,12 @@ for (let i = 1; i <= rows; i++) {
 
   for (let k = 1; k <= 2 * i - 1; k++) {
     // k === 2*i-1=2*1-1=1 | 2*2-1=3 | 2*3-1=5 | 2*4-1=7 | 2*5-1=9
-    if (k === 1 || k === 2 * i - 1 || (i === rows && (k % 2 !== 0) || (i==rows/2 && k === i))) {
+    if (
+      k === 1 ||
+      k === 2 * i - 1 ||
+      (i === rows && k % 2 !== 0) ||
+      (i == rows / 2 && k === i)
+    ) {
       line += "*";
     } else {
       line += " ";
@@ -94,16 +99,12 @@ for (let i = 1; i <= rows; i++) {
 //   *           *
 // *   *   *   *   *
 
-
-
 // while(true){
 //   console.log("hello")
 // }
 
-
 // do{
 
-  
 //   console.log("It will run 1 time hello")
 
 // }while(true){
@@ -111,25 +112,74 @@ for (let i = 1; i <= rows; i++) {
 
 // }
 
-
-let arr = [[1, 2, 3],
-[4, 5, 6],
-[20, 30, 40],
-[10, 20], [30, 40], [20, 30]]
- 
+let arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [20, 30, 40],
+  [10, 20],
+  [30, 40],
+  [20, 30],
+];
 
 // [1, 2, 3].length
 
+// for (let i = 0; i< arr.length; i++) {
+//   for (let j = 0; j< arr[i].length; j++) {
 
-for (let i = 0; i< arr.length; i++) {
-  for (let j = 0; j< arr[i].length; j++) {
+//     console.log(arr[i][j])
 
-    console.log(arr[i][j])
+//   }
 
+// }
 
+// function fibo(n) {
+//   let a = 0;  // 1      1
+//   let b = 1;  // 1      2
 
+//   for (i = a; i < n; i++) {
+//     console.log(a); // 0     1        1
+//     let sum = a + b; // sum = 1  2    3
+//     a = b;          // 1         1
+//     b = sum;        // 1         2
+//   }
+// }
+
+// fibo(10)
+
+// 5!  =  5*4! = 5*4*3! = (n)*(n-1)!
+
+// (n) + (n+1) =
+
+// nth = a + (n-1)d
+
+function fib(n) {
+  let fib = [0, 1];
+
+  for (i = 2; i < n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+    // 2    = 1  + 0
   }
-  
-  
+
+  return fib;
 }
 
+
+
+console.log(fib(1000))
+
+// [
+//   0, 1,  1,  2,  3,
+//   5, 8, 13, 21, 34
+// ]
+
+
+// 0
+// 1
+// 1
+// 2
+// 3
+// 5
+// 8
+// 13 n-2
+// 21 n-1
+// 34 n
