@@ -183,3 +183,18 @@ console.log(fib(1000))
 // 13 n-2
 // 21 n-1
 // 34 n
+
+// pallindrome : ABBA, MADAM, NITIN : 
+
+
+
+
+
+
+
+
+
+
+
+
+

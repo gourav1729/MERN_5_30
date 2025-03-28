@@ -6,6 +6,12 @@
 // 2) nodejs -> 
 
 
+
+
+
+
+
+
 // console.log("Hello World");
 
 // 1) What is JavaScript?
@@ -23,7 +29,9 @@
 // • Names can contain letters, digits, underscores, and dollar signs. (no space)
 // let a b = 10;
 // let a_2b = 10;
+
 // • Names must begin with a letter.
+
 // • Names can also begin with $
 // • Names are case sensitive (y and Y are different variables).
 let a = 10;
@@ -48,13 +56,21 @@ let A = 20;
 
 // CASE : 
 
+// kritanshuChaurasiya
+// kritanshu_chaurasiya
+// KritanshuChaurasiya
+// kritanshu-chaurasiya
+
 // 1)camelCase : fullName: ITS NOT A RULE BUT TRY TO FOLLOW THIS CASE FOR JS.
 // 2)snake_case : full_name
 // 3)pascalCase : FullName 
 // 4)kabab case : full-name
 
 
-// 4) Keywords : var, let, const
+// 4) Keywords : var, let, const 
+
+
+
 
 // 4. Data Types in JavaScript
 
@@ -81,15 +97,48 @@ let A = 20;
 // 4)/
 // 5)%
 
+
+
 // 10%3 = 1
 // 10/3 = 3.3333333333333335
 // |-a| = a => |-10| = 10
-// | a| = a => |10| = 10
+// | a| = a => |10| = 10      
+
+
+
+
+
 
 //6)
 // ->and : && 
 // ->or : ||
 // ->not : !
+
+
+// kritanshu and vash have to come today. 
+// kritanshu or vash have to come today.  
+
+if(5>3 && 5>2){
+    console.log("HELLO WORLD")
+}else{
+    console.log("HELLO WORLD 2")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // AND(&&)
 // VAL1  VAL2  VALUE
@@ -116,6 +165,12 @@ let A = 20;
 // (2+1)*3 -> 9
 
 
+
+
+
+
+
+
 //(5+2)/7+1*2 -> (7)/7 + 1*2 -> 1 + 1*2 -> 3
 
 // ()
@@ -134,22 +189,23 @@ let A = 20;
 // a--
 // --a
 
-// newNum = ++num;
-// console.log(num)       // un un
-// console.log(newNum)   // un un
+let num = 5;
+let newNum = ++num;
+console.log(num)       // un un
+console.log(newNum)   // un un
+   
 
-// let num = 5;
-// console.log(num)      //5 5
+newNum = num++;
+console.log(num)      
+console.log(newNum)  
 
-// let newNum = num++;
-// console.log(num)      //6  6
-// console.log(newNum)   //5  5
-
-// newNum = ++num;    
-// console.log(num)       //7 
-// console.log(newNum)    //7
+newNum = ++num;    
+console.log(num)       
+console.log(newNum)    
 
 
+
+//5 6 6 6 7 7
 // boolean -> true or false
 
 
@@ -246,8 +302,20 @@ let b = 10 ;
 // a;
 // null;
 
+//1) LET VAR COSNT 
+
+// for(var i = 0; i<5; i++){
+//     console.log(i)
+// }
 
 
+// 2)[10, 20, 40, 50, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+
+
+// 3) 10 20 30 40 50 60 70 80 90 100
+
+// 4) 10 20 30 40 50 60 70 80 90 100
 
 
 

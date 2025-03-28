@@ -110,3 +110,10 @@ const hello = setTimeout(()=>{
 })
 
 
+
+
+
+// Hoisting in JavaScript is a mechanism where variables and function declarations are moved to the top of their scope before code execution.
+
+
+

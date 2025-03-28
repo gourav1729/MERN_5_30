@@ -37,6 +37,8 @@
 // console.log(null(0) >= 0)   t  t
 // STACKOVER-FLOW   :: == () || >=, > (0)
 
+
+
 // Mathematically, that’s strange. The last result states that "null is greater than or equal to zero", so in one of the comparisons above it must be true, but they are both false.
 
 // The reason is that an equality check == and comparisons > < >= <= work differently. Comparisons convert null to a number, treating it as 0. That’s why (3) null >= 0 is true and (1) null > 0 is false.

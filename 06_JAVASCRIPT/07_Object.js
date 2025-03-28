@@ -62,7 +62,11 @@ console.log(object.address.address1.city)
 
 //7) Array of Objects :  Group multiple objects into an array.
 
-const employe = [{name:"shudanshu", role : "student1"}, {name : "nikhil", role: "student2"}, {name : "kushal", role: "student2"}, {name : "nikhil1", role: "student5"}]
+const employe = [{name:"shudanshu", role : "student1"}, 
+    {name : "nikhil", role: "student2"}, 
+    {name : "kushal", role: "student2"}, 
+    {name : "nikhil1", role: "student5"}
+]
 
 
 console.log(employe[3])
