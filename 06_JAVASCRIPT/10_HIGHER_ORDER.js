@@ -49,10 +49,21 @@ let preset = product.filter(i => i.present == true).map( i => i.name)
 console.log(preset)
 
 
+// 1. Use `map` to double the numbers in an array: `[1, 2, 3, 4]`.
+// 2. Use `filter` to find all words starting with the letter "a" in `['apple', 'banana', 'avocado', 'cherry']`.
+// 3. Combine `map` and `filter` to get the names of students who scored above 80 from:
+//    ```javascript
+//    let students = [
+//      { name: "John", score: 75 },
+//      { name: "Jane", score: 85 },
+//      { name: "Jake", score: 95 }
+//    ];
+//    ```
+// 4. Extract all even numbers greater than 10, square them, and return the new array from `[5, 12, 18, 7, 20]`.
 
 
 
-
+// REDUCE : 
 
 
 

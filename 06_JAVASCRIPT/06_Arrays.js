@@ -1,19 +1,31 @@
 // ARRAYS (DATA STRUCTURE)
-// Arrays are data structures used to store multiple values in a single variable, they same or different types of datatype.
+// Arrays are data structures used to store multiple values in a single variable, they may have same or different types of datatype.
 // They are ordered collections of items, accessible using indices (starting from 0).
 
 // let name1 =  ram
 // let name2 = shyam
 // let name3 = kaise
 // let name4 = albert
+// let name1 =  ram
+// let name2 = shyam
+// let name3 = kaise
+// let name4 = albert
+// let name1 =  ram
+// let name2 = shyam
+// let name3 = kaise
+// let name4 = albert
+
+
+// let name = ["kritanshu", "nikhil", "ram", "hello".............]
 
 //  0       1        2,   3
 // let name = ["ram", "shayma", ...................................]
+// let ary = ["hello", false, 0, "kaise ho"]
 
 let arr = ["apple", "mango", "cheery", "pineapple"];
 
-// arr.push("ramdom")
-// arr.pop()
+arr.push("ramdom")
+arr.pop()
 
 arr.unshift("sdsfvdfssdgfv");
 arr.shift();
@@ -42,7 +54,7 @@ console.log(arr);
 
 let arr1 = ["one", "two", "three", "four"];
 
-// console.log(arr1[1])
+console.log(arr1[1])
 
 arr1.unshift("adfcsadvdsf");
 arr1.shift();
@@ -76,7 +88,7 @@ console.log("evennum number", evennum);
 let arr10 = ["one", "two", "three", "four"];
 
 console.log(arr10.indexOf("one"));
-console.log(arr10.includes("one"));
+console.log(arr10.includes("oe"));
 
 const arr5 = [1, 2];
 const arr4 = [3, 4];
@@ -88,14 +100,26 @@ console.log(combined);
 //slice
 //splice
 
+
+let arrz = ["a", "c", "f", "b"]
+console.log(arrz.sort())
+
 let random = [998, 1000, 30, 20, 10001011, 10, 100, 900];
+console.log(random.sort())
+// [ 10, 100, 1000, 10001011, 20, 30, 900, 998 ]
+
+
+
+
+
 
 random.sort((a, b) => a - b);
 console.log(random);
+//[ 10, 20, 30, 100, 900, 998, 1000, 10001011 ]
 
 // a  b    => a-b
 // 10 20    => -10
-// =>
+// =>               30-20
 // ### Behavior of `(a - b)`
 // - **Negative**: `a` is smaller, so it goes first.
 // - **Positive**: `b` is smaller, so it goes first.
@@ -105,26 +129,39 @@ console.log(random);
 
 // 20 10 5 10 20
 //   0    1    2  3  4
-// const numbers1 = [10, 20, 30, 40, 50]
-// const sliced = numbers1.slice(0, 3)
-// console.log(sliced)
+const numbers1 = [10, 20, 30, 40, 50]
+const sliced = numbers1.slice(0, 5)
+console.log(sliced)
 
-// const removed = numbers1.splice(0,3)
-// console.log(removed)
-// console.log(numbers1)
+const removed = numbers1.splice(2,1)
+console.log("removed " + removed)  //[ 10, 20, 30 ]
+console.log(numbers1) //20, 30, 40, 50
 
+//03-MARCH-2024 : HW
 // How do you use .slice() to extract the first three elements of an array?
 // What is the difference between .splice() and .slice()?
 // How can you remove an element from a specific index using .splice()?
 // How do you reverse an array without modifying the original array?
+//pallindrome
+//fib 
+//anagram 
 
 //  H E L L O
 //  L L H E O
 
 // 1) same letter with same same number
 
-let ar1 = ["h", "l", "l", "e", "o"];
-let ar2 = ["h", "o", "l", "l", "e"];
+
+
+// e h l l o
+// e h l l o
+
+
+
+
+
+
+
 
 //  c++ -> pointer 
 
@@ -132,6 +169,11 @@ let ar2 = ["h", "o", "l", "l", "e"];
 // nikhil <--  nikh 
 
 // nikhil(copy) -> isme changes(call by value)
+
+
+
+
+
 
 
 // console.log(ar1.sort());
@@ -146,6 +188,9 @@ let ar2 = ["h", "o", "l", "l", "e"];
 
 // console.log(ar1 == ar2);
 
+let ar1 = ["h", "l", "l", "e", "o"];
+let ar2 = ["h", "o", "l", "l", "e"];
+
 ar1.sort()
 ar2.sort()
 
@@ -153,13 +198,14 @@ let flag = 0;
 
 for (let i = 0; i < arr1.length; i++) {
   if (ar1[i] == ar2[i]) {
-    flag = 1;
+    flag = 1; 
     
   } else {
     flag = 0
-    break;
+    
    
   }
+  break;
 }
 
 if (flag == 1) {
@@ -195,3 +241,18 @@ console.log([ 100, 120 ][1])
 
 
 
+
+// {
+  
+
+//   var b = 20
+//   let a = 10
+
+
+
+
+// }
+
+
+// console.log(b)
+// console.log(a)

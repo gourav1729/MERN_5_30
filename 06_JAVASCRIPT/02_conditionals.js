@@ -18,37 +18,20 @@ if (a > 10) {
 
 let num = 12
 //                 T
-//     T            &&                T
+//     T           &&                 T
 //     T                    F               T         
-if((num%3 === 0) && ((num + 1 == 15) || (num-1 == 11))){
+if((num%3 == 0) && ((num + 1 == 15) || (num-1 == 11))){
     console.log("SAFE")
 }else{
 
     console.log("UNSAFE")
 }
 
+console.log(num%3 == 0 )
+
 
 
 // A "good string" is a string that starts with the letter 'a' & has a length > 3. Write a Program to find if a string is good or not. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 let str = "abhishek";
@@ -61,13 +44,13 @@ if(str[0] === "a" || str.length > 15){
 }
 
 // n1, n2, n3 
+// 30, 10, 20
 
 
 // if{
 
     // if
-    //else 
-
+    //else
 
 // }
 
@@ -97,9 +80,6 @@ if(str[0] === "a" || str.length > 15){
 
 
 
-let x = 10 ;  
-let y = 4 ;
-let z = 5 ;
 
 
 // ls touch mkdir cd 
@@ -108,7 +88,6 @@ let z = 5 ;
 // git -> local repo github push 
 // git -> local system 
 
-// 
 
 
 
@@ -125,31 +104,51 @@ let z = 5 ;
 
 
 
+let x = 10 ;  
+let y = 4 ;
+let z = 5 ;
 
 
 
 
-// x 
-// if(x > y && x > z){
-//     if(y > z){
-//         console.log(x, y, z)
-//     }else{
-//         console.log(x, z, y)
-//     }   
-// } else if(y > x && y > z){
-//     if(x > z){
-//         console.log(y, x, z)
-//     }else{
-//         console.log(y, z, x)
-//     }
-// }
-// else if(z > x && z > y){
-//     if(x > y){
-//         console.log(z, x, y)
-//     }else{
-//         console.log(z, y, x)
-//     }
-// }
+
+
+// x > y > z
+// x > z > y
+
+// y > x > z
+// y > z > x
+
+
+
+
+
+if(x > y && x > z){
+    if(y > z){
+        console.log(x, y, z)
+    }else{
+        console.log(x, z, y)
+    }   
+} else if(y > x && y > z){
+    if(x > z){
+        console.log(y, x, z)
+    }else{
+        console.log(y, z, x)
+    }
+}
+else if(z > x && z > y){
+    if(x > y){
+        console.log(z, x, y)
+    }else{
+        console.log(z, y, x)
+    }
+}
+
+// 4! = 4 * 3 * 2 * 1 
+
+
+
+
 
 
 

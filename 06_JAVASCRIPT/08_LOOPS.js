@@ -1,14 +1,13 @@
 //
 
-console.log(1);
-console.log(2);
-console.log(3);
-console.log(4);
-console.log(5);
-console.log(6);
-console.log(7);
-console.log(8);
-console.log(9);
+// console.log(1);
+// console.log(2);
+// console.log(3);
+// console.log(4);
+// console.log(5);
+// console.log(6);
+// console.log(7);
+// console.log(8);
 
 // init, condition, inc/dec
 
@@ -24,9 +23,9 @@ console.log(9);
 // }
 
 // / let a = 11;
-for (let i = 1; i <= 10; i++) {
-  console.log(i);
-}
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
 
 // / ### Explanation of the Syntax:
 // - **Initialization:** `let i = 0` initializes the loop variable.
@@ -43,7 +42,7 @@ for (let i = 1; i <= 10; i++) {
 
 let a = 21;
 for (let i = 1; i < 11; i++) {
-  console.log(i * a);
+  console.log(i );
 }
 
 // 21
@@ -69,29 +68,29 @@ for (let i = 1; i < 11; i++) {
 
 let rows = 10;
 
-for (let i = 1; i <= rows; i++) {
-  let line = "";
+// for (let i = 1; i <= rows; i++) {
+//   let line = "";
 
-  //
-  for (let j = 1; j <= rows - i; j++) {
-    line += " ";
-  }
+//   //
+//   for (let j = 1; j <= rows - i; j++) {
+//     line += " ";
+//   }
 
-  for (let k = 1; k <= 2 * i - 1; k++) {
-    // k === 2*i-1=2*1-1=1 | 2*2-1=3 | 2*3-1=5 | 2*4-1=7 | 2*5-1=9
-    if (
-      k === 1 ||
-      k === 2 * i - 1 ||
-      (i === rows && k % 2 !== 0) ||
-      (i == rows / 2 && k === i)
-    ) {
-      line += "*";
-    } else {
-      line += " ";
-    }
-  }
-  console.log(line);
-}
+//   for (let k = 1; k <= 2 * i - 1; k++) {
+//     // k === 2*i-1=2*1-1=1 | 2*2-1=3 | 2*3-1=5 | 2*4-1=7 | 2*5-1=9
+//     if (
+//       k === 1 ||
+//       k === 2 * i - 1 ||
+//       (i === rows && k % 2 !== 0) ||
+//       (i == rows / 2 && k === i)
+//     ) {
+//       line += "*";
+//     } else {
+//       line += " ";
+//     }
+//   }
+//   console.log(line);
+// }
 
 //         *
 //       *   *
@@ -101,16 +100,16 @@ for (let i = 1; i <= rows; i++) {
 
 // while(true){
 //   console.log("hello")
-// }
+// } 
 
-// do{
+do{
 
-//   console.log("It will run 1 time hello")
+  console.log("It will run 1 time hello")
 
-// }while(true){
-//   console.log("hello")
+}while(false){
+  console.log("hello")
 
-// }
+}
 
 let arr = [
   [1, 2, 3],
@@ -152,20 +151,20 @@ let arr = [
 
 // nth = a + (n-1)d
 
-function fib(n) {
-  let fib = [0, 1];
+// function fib(n) {
+//   let fib = [0, 1];
 
-  for (i = 2; i < n; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
-    // 2    = 1  + 0
-  }
+//   for (i = 2; i < n; i++) {
+//     fib[i] = fib[i - 1] + fib[i - 2];
+//     // 2    = 1  + 0
+//   }
 
-  return fib;
-}
+//   return fib;
+// }
 
 
 
-console.log(fib(1000))
+// console.log(fib(1000))
 
 // [
 //   0, 1,  1,  2,  3,
@@ -187,14 +186,4 @@ console.log(fib(1000))
 // pallindrome : ABBA, MADAM, NITIN : 
 
 
-
-
-
-
-
-
-
-
-
-
-
+// fib : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89

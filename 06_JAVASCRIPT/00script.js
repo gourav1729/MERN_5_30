@@ -15,7 +15,7 @@
 // console.log("Hello World");
 
 // 1) What is JavaScript?
-
+// JavaScript (JS) is a lightweight, interpreted (or just-in-time compiled) programming language primarily used to create interactive and dynamic web pages, but also used in server-side environments and other applications. 
 
 // 2)Using the Console
 
@@ -60,14 +60,24 @@ let A = 20;
 // kritanshu_chaurasiya
 // KritanshuChaurasiya
 // kritanshu-chaurasiya
+// ankit || aniket 
 
 // 1)camelCase : fullName: ITS NOT A RULE BUT TRY TO FOLLOW THIS CASE FOR JS.
 // 2)snake_case : full_name
-// 3)pascalCase : FullName 
+// 3)pascalCase : FullName
 // 4)kabab case : full-name
 
 
 // 4) Keywords : var, let, const 
+
+
+{
+    // var a1 = 10
+    // let b = 10
+}
+
+// console.log(a1)
+// console.log(b)
 
 
 
@@ -82,12 +92,15 @@ let A = 20;
 // 4)Null : null
 // null => standalone value. AND IT MEANS KI VARIALE KO DECLARE KAR DIYA HAI AND INTENTIONALLY NULL DE DIYA HAI.
 // undefined => THIS MEANS KI ABHI VALUE ASSINGN NAHI HUI HAI. AND HERE IT MEANS KI VARIABLE DECLARE KAR DIYA HAI AND ISKO ABHI DEFINE 
-// 7)BigInt : 100
+// 7)BigInt : 100 : -(2^53 - 1) to 2^53 - 1 : iske bhar agar : 9007199254740991.
+//Symbol → Used to create unique and immutable identifiers.
 
 // 2)Non-Primitive Data Types
 //Object 
 //Array
 //Function
+
+let aaaa = null;
 
 
 //5)ARITHMATIC OPERATORS IN JS
@@ -189,17 +202,26 @@ if(5>3 && 5>2){
 // a--
 // --a
 
-let num = 5;
-let newNum = ++num;
-console.log(num)       // un un
-console.log(newNum)   // un un
+let d = 10; // 11
+// console.log(++d) // 11
+console.log(d++) // 10 -> 11
+console.log(d++)  // 11 -> 12
+console.log(d++)  // 11 -> 12
+
+
+
+
+let num = 5; 
+let newNum = ++num;   // 6 6 
+console.log(num)      // 6
+console.log(newNum)   //6 
    
 
-newNum = num++;
-console.log(num)      
-console.log(newNum)  
+newNum = num++;   // 6->  6 ->  7 
+console.log(num)      //6
+console.log(newNum)   //6
 
-newNum = ++num;    
+newNum = ++num;    //
 console.log(num)       
 console.log(newNum)    
 
@@ -231,11 +253,15 @@ let name =" ratanshil "
 let role = "developer"
 let message = "Hello 'World'"
 let message2 = ''
+// let name23 = ""100""
 // let name2 = ""100""
 // let name2 = ''100''
 // let name2 = "'100'"
-let name2 = '"100"'
+// let name2 = '"100"'
 // console.log(name2)
+// ``
+
+
 
 
 
@@ -245,14 +271,15 @@ let name2 = '"100"'
 
 // ""hello ''world''""
 
-// console.log(""hello ''world''"")
+// console.log("""hello ''world''""")
 
 
 // console.log("hello 'world'")
 
-let b = 10 ;
+let b = "KRITANSHU" ;
 
-// console.log(`hello 'world' ${b} ` )
+
+console.log(`hello 'world' ${b} ` )
 
 
 // """", '''', '""', "''"  : ``

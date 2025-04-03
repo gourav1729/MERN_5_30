@@ -1,9 +1,10 @@
-// -> falsy values :
-// 0, null, undefined, NaN, "", false
-// false, 0, -0, On (Bigint value), "" (empty string), null, undefined, NaN, document.all
+// ->FALSY VALUES
+// false, 0, -0, On (Bigint value), "" (empty string), null, undefined, NaN
+
+// ->TRUTH VALUES : EVERYTHING ELSE, EXCEPT FALSY VALUES .
 
 
-if(""){
+if(" "){
     console.log("Truthy")
 }
 else{

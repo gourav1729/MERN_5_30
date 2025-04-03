@@ -28,7 +28,7 @@ console.log(student.age)
 console.log(student.course)
 
 
-// add/update values
+// update values
 
 const  person = {
     name : "Nikhil",
@@ -39,11 +39,12 @@ const  person = {
 
 console.log(person)
 console.log(person.age)
-person.age = 30
+person.age = 24
 
-console.log(person.age)
+console.log("age " + person.age)
 
 
+//DATE : 03-04-2025
 // **Exercise:** Create a `blogPost` object with properties `title`, `content`, and `views`
 // **Exercise:** Create a `instagram` object with properties `name`, `likes`, and `comments`
 
@@ -68,10 +69,27 @@ const employe = [{name:"shudanshu", role : "student1"},
     {name : "nikhil1", role: "student5"}
 ]
 
+console.log(employe[3].role)
 
-console.log(employe[3])
-console.log(employe[3].name)
-console.log({ name: 'nikhil1', role: 'student5' }.name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(employe[3])
+// console.log(employe[3].name)
+// console.log({ name: 'nikhil1', role: 'student5' }.name)
 
 
 //8)MATH OBJECTS 
@@ -80,26 +98,56 @@ console.log({ name: 'nikhil1', role: 'student5' }.name)
 // - `Math.round(x)` - Rounds to the nearest integer -> 7.8 -> 8
 
 
+// const math = {
+
+
+// }
+
+console.log(Math.PI) // 3.14
+
+
+
 // console.log(Math.PI)
 // console.log(Math.sqrt(9))
 // console.log(Math.round(9.1))
 // console.log(Math.sin(1))
 // 0 1/2 1/2 3/2 1
-// 
+
+
+
+let R = 5;
+console.log(Math.pow(R, 2)) // 5*5 = 25
+console.log(R**2)
+console.log(R**2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // pie*R*R*L
 
 
-// console.log(Math.floor(Math.random()*10))
-// console.log(Math.floor(Math.random()*10))
+console.log("This is random number " + Math.random()*10)
+console.log(Math.floor(Math.random()*10))
 // console.log(Math.floor(Math.random()*10))
 // console.log(Math.floor(Math.random()*10))
 
 
 
 
-let result = (Math.random())*10
+let result = (Math.random())*1000
+console.log(result)
 
 console.log(Math.floor(result))
 console.log(Math.ceil(result))
@@ -116,6 +164,8 @@ console.log(Math.ceil(result))
 // 2)- Calculate the area of a circle, volume of cylinder using `Math.PI`.
 // 3)-- Generate a random number between 1 and 10 using `Math.random()` AND MAEK A PROGRAM FOR GUSSING ANY RANDOM NUMBR AND IT SHOULD HAVE 1 WINING CONDITION.
 // 5)Create a nested object `course` with properties `title`, `duration`, and a nested object `instructor` with `name` and `experience`.
+
+// lottery ticket 1-1000
 
 
 
