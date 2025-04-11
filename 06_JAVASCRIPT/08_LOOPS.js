@@ -11,16 +11,24 @@
 
 // init, condition, inc/dec
 
+for (let index = 0; index < 20; index++) {
+  console.log(index);
+}
+
 // arr[i]
 
 // ## Concept:
 // A for loop is used to repeat a block of code a specific number of times. It’s best when the number of iterations is known beforehand.
 
-// let a = 11;
-// for (let i = 100; i > 0; i--) {
-//     console.log(i*a)
+let arr12 = [20, 30, 4, 50, 60, 70];
 
-// }
+let arr1234 = [];
+
+for (let i = arr12.length - 1; i > 0; i--) {
+  arr1234.push(arr12[i]);
+}
+
+console.log(arr1234);
 
 // / let a = 11;
 // for (let i = 1; i <= 10; i++) {
@@ -42,7 +50,7 @@
 
 let a = 21;
 for (let i = 1; i < 11; i++) {
-  console.log(i );
+  console.log(i);
 }
 
 // 21
@@ -100,15 +108,13 @@ let rows = 10;
 
 // while(true){
 //   console.log("hello")
-// } 
+// }
 
-do{
-
-  console.log("It will run 1 time hello")
-
-}while(false){
-  console.log("hello")
-
+do {
+  console.log("It will run 1 time hello");
+} while (false);
+{
+  console.log("hello");
 }
 
 let arr = [
@@ -162,15 +168,12 @@ let arr = [
 //   return fib;
 // }
 
-
-
 // console.log(fib(1000))
 
 // [
 //   0, 1,  1,  2,  3,
 //   5, 8, 13, 21, 34
 // ]
-
 
 // 0
 // 1
@@ -183,7 +186,6 @@ let arr = [
 // 21 n-1
 // 34 n
 
-// pallindrome : ABBA, MADAM, NITIN : 
-
+// pallindrome : ABBA, MADAM, NITIN :
 
 // fib : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89

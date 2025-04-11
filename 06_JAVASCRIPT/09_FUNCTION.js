@@ -30,7 +30,6 @@
 // - Benefits:
 //      - Reduces redundancy.
 //      - Increases code clarity and maintainability.
-//      - 
 
 
 
@@ -102,18 +101,21 @@ name1(10,20)
 
 // const internal = setInterval(() => {
 //     console.log("kristanshu")
-// },  1 )
+// },  2000)
 
 
-const hello = setTimeout(()=>{
-    console.log("hello")
-})
+// const hello = setTimeout(()=>{
+//     console.log("hello")
+// }, 2000)
 
 
 
 
 
 // Hoisting in JavaScript is a mechanism where variables and function declarations are moved to the top of their scope before code execution.
+
+
+// function(fn)
 
 
 

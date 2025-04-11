@@ -129,6 +129,8 @@ console.log(random);
 
 // 20 10 5 10 20
 //   0    1    2  3  4
+
+
 const numbers1 = [10, 20, 30, 40, 50]
 const sliced = numbers1.slice(0, 5)
 console.log(sliced)
@@ -136,7 +138,6 @@ console.log(sliced)
 const removed = numbers1.splice(2,1)
 console.log("removed " + removed)  //[ 10, 20, 30 ]
 console.log(numbers1) //20, 30, 40, 50
-
 //03-MARCH-2024 : HW
 // How do you use .slice() to extract the first three elements of an array?
 // What is the difference between .splice() and .slice()?
@@ -202,10 +203,11 @@ for (let i = 0; i < arr1.length; i++) {
     
   } else {
     flag = 0
+    break;
     
    
   }
-  break;
+  
 }
 
 if (flag == 1) {

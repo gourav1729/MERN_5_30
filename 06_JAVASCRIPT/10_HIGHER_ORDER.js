@@ -10,7 +10,7 @@
 
 
 
-let arr = [20, 10]
+let arr = [20, 10, 30, 50, 40, 60, 70, 80, 90, 100]
 
 let multi = arr.map( num => 2 * num )
 console.log(multi)
@@ -32,8 +32,8 @@ console.log(far)
 
 let arr1 = [20, 100, 220, 100, 10, 5, 4];
 
-let even = arr1.filter(i => i > 20)
-console.log(even)
+let kuchbhi = arr1.filter(i => i > 20)
+console.log(kuchbhi)
 
 
 
@@ -62,12 +62,125 @@ console.log(preset)
 // 4. Extract all even numbers greater than 10, square them, and return the new array from `[5, 12, 18, 7, 20]`.
 
 
+const numbers = [5, 12, 18, 7, 20]
 
-// REDUCE : 
+const result = numbers.filter(num => num > 10 && num%2==0).map(num => num**2)
+console.log(result)
+
+//REDUCE : The reduce() method reduces an array to a single value by executing a callback function on each element of the array.
+
+
+// Array.redduce((accumalator, currentvale) => {
+//     return updatedAccumalator;
+// }, initialvalue)
+
+
+// accumulator: stores the running result.
+
+// currentValue: the current element in the iteration.
+
+// initialValue: the starting value of the accumulator.
+
+// 0 + 1 = 1 
+// 1 + 2 = 3
+// 3 + 3 = 6
+// 6 + 4 = 10
+// 10 + 5 = 15
+// 15 + 6 = 21
+
+let red = [1,2,3,4,5]  
+
+let sum = red.reduce((acc, curr) => acc + curr, 0)
+
+console.log(sum)
+
+
+// Problem: Calculate Total Salary of Developers With Bonus
+// Given an array of employees, return the total salary of only those who are developers, after adding a 10% bonus to each of their salaries.
+
+const employees = [
+    { name: "Alice", role: "developer", salary: 50000 },
+    { name: "Bob", role: "designer", salary: 40000 },
+    { name: "Charlie", role: "developer", salary: 60000 },
+    { name: "David", role: "manager", salary: 70000 },
+    { name: "Eve", role: "developer", salary: 55000 }
+  ];
+
+
+
+  // 55000 + 66000 + 50000 + 60500 = 187000
 
 
 
 
+
+
+
+
+
+
+  const totalDevSalary = employees.filter(emp => emp.role == "developer").map(dev => dev.salary + dev.salary*0.1).reduce((total, curr) => total+curr, 0)
+
+  console.log(totalDevSalary)
+
+// 55000 + 66000 + 
+//   0.1*50000
+// 187000
+
+// 100 * 100/10 = 1000
+  
+
+
+
+const cart = [
+    { item: 'Book', price: 15 },
+    { item: 'Pen', price: 5 },
+    { item: 'Bag', price: 25 }
+  ];
+
+
+  const total = cart.reduce((acc, pro) => acc + pro.price, 0)
+
+
+
+ 
+
+
+  // for (let index = 0; index < array.length; index++) {
+  //   const element = array[index];
+    
+  // }
+
+  // for-of loop
+
+  // for(let abc of arrz){
+  //   console.log(abc)
+  // }
+
+
+
+  // let obj = {id : 1, name : "nikhil", present : true}
+
+  
+  // for (const key in obj) {
+    
+  //   console.log(key, obj[key])
+
+  // }
+
+
+  let arrz = [10, 20, 30, 40, 50, 60, 70]
+
+
+  arrz.forEach((num, index) => {
+
+    console.log(index, num, index)
+  })
+
+
+
+
+  
 
 
 

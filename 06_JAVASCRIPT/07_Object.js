@@ -34,6 +34,8 @@ const  person = {
     name : "Nikhil",
     age : 23,
 }
+//             0      1 
+const arr = ["Nikhil",23 ]
 
 
 
@@ -55,20 +57,30 @@ console.log("age " + person.age)
 const object = {
     name : "Hello",
     address : {city : "India", address1 : {city : "india2"},  address3 : {city : "india3"}}
+
 }
 
+
+
+console.log(object.address.address1.city)
 
 console.log(object.address.address1.city)
 
 
 //7) Array of Objects :  Group multiple objects into an array.
 
-const employe = [{name:"shudanshu", role : "student1"}, 
+const employe = [
+    {name:"shudanshu", role : "student1"}, 
     {name : "nikhil", role: "student2"}, 
     {name : "kushal", role: "student2"}, 
     {name : "nikhil1", role: "student5"}
 ]
 
+
+
+
+
+console.log(employe[3].name)
 console.log(employe[3].role)
 
 
@@ -87,12 +99,55 @@ console.log(employe[3].role)
 
 
 
-// console.log(employe[3])
-// console.log(employe[3].name)
+console.log(employe[3])
+console.log(employe[3].name)
 // console.log({ name: 'nikhil1', role: 'student5' }.name)
 
 
 //8)MATH OBJECTS 
+
+
+
+
+// const math = {
+
+//     pi : 3.14,
+//     sqrt : fn,
+//     sin : 0
+// }
+
+
+
+
+console.log(Math.PI)
+console.log(Math.sqrt(225))
+console.log(Math.round(3.2))
+console.log(Math.floor(3.4))
+console.log(Math.ceil(3.4))
+console.log(Math.pow(3, 3))
+// console.log(Math.sin(1))
+// console.log(Math.c())
+console.log(Math.random())
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+console.log((Math.floor(Math.random()*100)))
+
+
+// let 20;
+
+
+
+
+
+
+
 // - `Math.PI` - π value -> 3.14 -> 22/7
 // - `Math.sqrt(x)` - Square root -> 9 -> 3 , 16->4
 // - `Math.round(x)` - Rounds to the nearest integer -> 7.8 -> 8
@@ -103,7 +158,7 @@ console.log(employe[3].role)
 
 // }
 
-console.log(Math.PI) // 3.14
+// console.log(Math.PI) // 3.14
 
 
 
@@ -115,12 +170,19 @@ console.log(Math.PI) // 3.14
 
 
 
-let R = 5;
-console.log(Math.pow(R, 2)) // 5*5 = 25
-console.log(R**2)
-console.log(R**2)
+// let R = 5;
+// console.log(Math.pow(R, 2)) // 5*5 = 25
+// console.log(R**2)
+// console.log(R**2)
 
 
+
+
+// 4   50 
+
+
+// 4, 5 => (4^3 + 5^3)1/3 = 64 + 125 = 189
+//( 4^3 )^1/3
 
 
 
@@ -138,8 +200,8 @@ console.log(R**2)
 // pie*R*R*L
 
 
-console.log("This is random number " + Math.random()*10)
-console.log(Math.floor(Math.random()*10))
+// console.log("This is random number " + Math.random()*10)
+// console.log(Math.floor(Math.random()*10))
 // console.log(Math.floor(Math.random()*10))
 // console.log(Math.floor(Math.random()*10))
 
@@ -162,7 +224,7 @@ console.log(Math.ceil(result))
 
 // 1)MAKE LIST OF 10 METHODS IN MATH OBJECT WHICH IS FRQUENTLY USED.
 // 2)- Calculate the area of a circle, volume of cylinder using `Math.PI`.
-// 3)-- Generate a random number between 1 and 10 using `Math.random()` AND MAEK A PROGRAM FOR GUSSING ANY RANDOM NUMBR AND IT SHOULD HAVE 1 WINING CONDITION.
+// 3)-- Generate a random number between 1 and 100 using `Math.random()` AND MAEK A PROGRAM FOR GUSSING ANY RANDOM NUMBR AND IT SHOULD HAVE 1 WINING CONDITION.
 // 5)Create a nested object `course` with properties `title`, `duration`, and a nested object `instructor` with `name` and `experience`.
 
 // lottery ticket 1-1000
