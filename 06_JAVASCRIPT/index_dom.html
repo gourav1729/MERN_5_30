@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+    1)Definition of DOM (Document Object Model) 
+    The DOM is a programming interface that represents an HTML tree structure, where each node represents an element, attribute, or piece of text.
+    Example:
+    <div id="container">
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph.</p>
+    </div>
+    In the DOM, this HTML code is represented as a tree with div as the parent node and h1 & p as child nodes.
+    
+    
+    1)select -> change
+    2)create -> postion(select) -> append
+    
+    -->
+
+<!-- 
+- **Theory**:
+- **getElementById**: Selects an element by its ID
+
+**Purpose:** Selects a single element with a unique id attribute.
+
+**Return Type:** Element or null (if no match is found).
+
+**Performance:** Fastest method since IDs are unique.
+
+
+- **getElementsByClassName**: Selects elements by their class name.
+
+**Purpose:** Selects multiple elements sharing a class attribute.
+**Return Type:** HTMLCollection 
+**Use Case:** Bulk operations on elements of the same type.
+
+
+
+- **getElementsByTagName**: Selects elements by their tag name.
+**Purpose:** Selects elements by their HTML tag (e.g., div, p, h1).
+
+**Return Type:** HTMLCollection
+**Use Case:** Bulk operations on elements of the same type.
+
+
+
+- **querySelector**: Selects the first element that matches a CSS selector.
+- **querySelectorAll**: Selects all elements that match a CSS selector. -->
+
+
+
+<p id="nikhil"  >THIS IS SELECTED ON BASIS OF ID</p>
+
+
+
+<!-- 
+1)  nikhil         mern 
+2)  gautam         mern
+3)  shudanshu      mern
+4)  ritik          mern 
+-->
+
+
+
+
+
+
+
+
+<p class="error">Invalid input</p>
+<div class="error"> Hello world</div>
+
+
+<p class="hello">THIS IS MY FIRST P TAG</p>
+<p class="hello">THIS IS MY FIRST P TAG</p>
+<p class="hello">THIS IS MY FIRST P TAG</p>
+<p class="hello">THIS IS MY FIRST P TAG</p>
+<p class="hello">THIS IS MY FIRST P TAG</p>
+<p class="hello">THIS IS MY FIRST P TAG</p>
+<p class="hello">THIS IS MY FIRST P TAG</p>
+
+
+
+
+
+<script>
+    const random = document.getElementById("nikhil")
+    random.style.color = "red"
+
+    // const random = document.getElementsByClassName("error")
+
+    const hello = document.querySelector(".nikhil")
+
+    const hello123 = document.getElementsByClassName("hello")
+
+
+
+    for (let i = 0; i < hello123.length -3; i++) {
+         hello123[1].style.backgroundColor = "red"
+        
+    }
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

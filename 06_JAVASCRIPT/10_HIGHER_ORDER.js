@@ -171,6 +171,8 @@ const cart = [
 
   let arrz = [10, 20, 30, 40, 50, 60, 70]
 
+  
+
 
   arrz.forEach((num, index) => {
 
@@ -181,6 +183,33 @@ const cart = [
 
 
   
+
+  // REMOVE DUPLICATE ELEMENTS FROM ARRAY : [1,1,2,3,44, 5]
+  //  FIND FREQUENCY : frequecny of each element 
+  // ALL SUB-ARRAY : [10, 20, 30, 40, 50]
+
+10, 
+10, 20
+10, 20, 30
+10, 20, 30 , 40 
+10, 20 , 30, 40, 50
+
+20
+20, 30
+20, 30 , 40 
+20 , 30, 40, 50
+
+
+30
+30 ,40 
+30, 40, 50
+
+40 
+40, 50
+
+50
+
+
 
 
 
