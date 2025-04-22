@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span {
+
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+
+- `innerHTML`
+Gets or sets the **HTML content** of an element.
+
+- `innerText`
+Gets or sets the **visible text** content of an element.
+Ignores content hidden using CSS (`display: none`, `visibility: hidden`).
+
+- `textContent`
+- Gets or sets the **text content** of an element, regardless of its visibility.
+- Does **not** parse or render HTML tags.
+-->
+
+    <div id="demo">
+
+        Hello <span>Hello world</span>
+
+
+    </div>
+
+
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+  
+
+
+    <script>
+
+        const demo = document.getElementById("demo")
+
+
+
+
+
+
+        document.getElementById('output1').innerHTML = "innerHtml : " + demo.innerHTML
+        document.getElementById('output2').textContent = "innerText : " + demo.innerText
+        document.getElementById('output3').textContent = "textContent : " + demo.textContent
+
+        //1)hello 
+        //2)hello
+        //3)hello hello world
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

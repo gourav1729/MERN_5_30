@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Style Manipulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+
+    #box {
+      width: 200px;
+      height: 100px;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+      line-height: 100px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .card {
+      width: 250px;
+      height: 150px;
+      border: 1px solid #ddd;
+      margin-top: 30px;
+    }
+
+    .section {
+      width: 100%;
+      height: 80px;
+      margin-top: 20px;
+      text-align: center;
+      line-height: 80px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎨 JavaScript Inline Style Manipulation</h2>
+
+  <!-- Box Example -->
+  <div id="box">I'm a Box</div>
+  <button onclick="changeBoxStyle()">Change Box Style</button>
+
+  <!-- Card Example -->
+  <h3>🧪 Card Styling Practice</h3>
+  <div id="card" class="card">Styled with JS</div>
+  <button onclick="styleCard()">Style the Card</button>
+
+  <!-- Section Toggle Example -->
+  <h3>🌈 Background Toggle Example</h3>
+  <div id="section" class="section">Toggle My Color</div>
+  <button onclick="toggleBackground()">Toggle Background</button>
+
+  <script>
+    function changeBoxStyle() {
+      const box = document.getElementById('box');
+      box.style.backgroundColor = 'red';
+      box.style.color = 'white';
+      box.style.padding = '20px';
+      box.style.borderRadius = '100px';
+      box.style.textAlign = 'center';
+      box.style.fontSize = '18px';
+    }
+
+    function styleCard() {
+      const card = document.getElementById('card');
+      card.style.borderRadius = '15px';
+      card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+      card.style.padding = '15px';
+      card.style.backgroundColor = '#fff';
+    }
+
+    let toggled = false;
+    function toggleBackground() {
+      const section = document.getElementById('section');
+      if (toggled) {
+        section.style.backgroundColor = 'white';
+        section.style.color = '#000';
+      } else {
+        section.style.backgroundColor = 'black';
+        section.style.color = '#fff';
+      }
+      toggled = !toggled;
+    }
+  </script>
+
+</body>
+</html>
+
+<!-- 
+
+ no(blue)
+yes(red) -> no(blue)
+no(blue) -> yes(red)
+yes -> no
+yes -> no
+yes -> no
+yes -> no
+
+
+let toggled = false(blue);
+
+if(true){
+     red
+
+}else {
+     blue
+}
+
+
+toggled = !toggled; // toggled = true(blue) -> false(red)
+
+
+
+
+
+-->

@@ -23,6 +23,8 @@ const student = {
 //  get values in object 
 
 
+
+
 console.log(student.name)
 console.log(student.age)
 console.log(student.course)

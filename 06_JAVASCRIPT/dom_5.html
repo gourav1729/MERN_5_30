@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>classList API Demo</title>
+  <style>
+    .box {
+      width: 120px;
+      height: 120px;
+      background-color: red;
+      margin: 20px auto;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active {
+      background-color: green;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+    
+<!-- 
+### The classList 
+The `classList` property of an element returns a `DOMTokenList` of the classes on that element. It provides several useful methods:
+
+✅ What is classList?
+It returns a live DOMTokenList (a special array-like object).
+
+That list contains all the class names applied to an element.
+
+You can add, remove, toggle, check for classes — without touching the whole className strin
+
+
+- **classList.add(className)**
+  - Adds the specified class to the element. If the class is already present, it will not add it again.
+
+- **classList.remove(className)**
+  - Removes the specified class from the element. If the class does not exist, nothing happens.
+
+- **classList.toggle(className)**
+  - Toggles the presence of the class on the element. If the class is present, it removes it; if it's not present, it adds it.
+    
+-->
+
+  <div class="box" id="myBox"></div>
+
+  <button onclick="addHighlight()">Add Highlight</button>
+  <button onclick="removeHighlight()">Remove Highlight</button>
+  <button onclick="toggleActive()">Toggle Active</button>
+  <button onclick="hideBox()">Hide Box</button>
+  <button onclick="showBox()">Show Box</button>
+
+  <script>
+    const box = document.getElementById('myBox');
+
+    function addHighlight() {
+      box.classList.add('highlight');
+    }
+
+    function removeHighlight() {
+      box.classList.remove('highlight');
+    }
+
+    function toggleActive() {
+      box.classList.toggle('active');
+    }
+
+    function hideBox() {
+      box.classList.add('hidden');
+    }
+
+    function showBox() {
+      box.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    In JavaScript, you can interact with the **attributes** of HTML elements (like `href`, `src`, `alt`, `class`, `id`, etc.) using the `getAttribute()` and `setAttribute()` methods. These are essential for dynamically modifying your web page's behavior or appearance.
+
+    ## ✳️ getAttribute()
+
+    ### ✅ Description:
+    - Retrieves the **value** of a specified attribute from an element.
+
+    ### 🔧 Syntax:
+    ```javascript
+    element.getAttribute(attributeName);
+
+    ## ✳️ setAttribute()
+
+    ### ✅ Description:
+    - Sets or updates the value of a specified attribute on an element.
+
+    ### 🔧 Syntax:
+    ```javascript
+    element.setAttribute(attributeName, value);
+    ```
+    ```
+     -->
+
+
+    <!-- <h2>Manuplating my attributes examples</h2> -->
+
+    <a id="myLink" href="https://www.linkedin.com/in/gouravchouhan/">Visit my site</a>
+    <br>
+    <!-- <img id="myImage" src="HELLORANDOMIMAGE1" alt="hello">
+    <br>
+
+    <input id="myInput" type="text" value="Initial value"> -->
+
+    <p id="output"></p>
+    
+
+    <!-- <p id="output"></p> -->
+
+
+
+
+    <script>
+        const link = document.getElementById('myLink') 
+        const output = document.getElementById('output')
+
+        const originalLink = link.getAttribute('href')  //https://www.linkedin.com/in/gouravchouhan/
+
+        link.setAttribute('href', "newlink")  //https://www.linkedin.com/in/gouravchouhan/ -> newlink
+
+
+
+
+       output.innerHTML = `
+
+       <strong>Orignal href : </strong> ${originalLink}
+       <br/>
+       <strong> updated href : </strong> ${link.getAttribute('href')}
+       
+       `
+       output.textContent = `
+
+       <strong>Orignal href : </strong> ${originalLink}
+       <br/>
+       <strong>Orignal href : </strong> ${link.getAttribute('href')}
+       
+       `
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
