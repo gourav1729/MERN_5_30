@@ -5,16 +5,11 @@ console.log("Hello World 4");
 console.log("Hello World 5");
 console.log("Hello World 6");
 
-
-// kuch code 
+// kuch code
 // aisa code jo time lega()
-// kuch code 
-
+// kuch code
 
 // time
-
-
-
 
 // 1. Synchronous code executes in sequence, one after the other.
 // 2. Each line of code is executed only after the previous line has completed.
@@ -25,7 +20,6 @@ console.log("Hello World 6");
 // 6. In JavaScript, synchronous code is executed in a single thread, meaning that only one piece of code can be executed at a time.
 
 //what is callback hell : callback hell is a situation in which a program becomes difficult to read and maintain due to excessive nesting of callbacks. This can occur when multiple asynchronous operations are performed in sequence, and each operation relies on the completion of the previous one. As a result, the code can become deeply nested and difficult to follow, leading to what is commonly referred to as "callback hell."
-
 
 // 1.async code executes in parallel, allowing multiple pieces of code to run at the same time.
 // 2. This means that if one piece of code takes a long time
@@ -39,42 +33,198 @@ console.log("Hello World 6");
 // 9. In JavaScript, asynchronous code is executed using the event loop, which allows for non-blocking I/O operations.
 // 10. The event loop is a mechanism that allows JavaScript to perform non-blocking I/O operations by using callbacks, promises, and async/await.
 
+console.log("LINE 1");
 
-console.log("LINE 1")
-
-function hello(){
-    console.log("LINE 5"); 
-   
+function hello() {
+  console.log("LINE 5");
 }
 
-console.log("LINE 2")
+console.log("LINE 2");
 
-function demo(){
-    console.log("LINE 4")
-    hello();
+function demo() {
+  console.log("LINE 4");
+  hello();
 }
 
-console.log("LINE 3")
+console.log("LINE 3");
 
-demo()
+demo();
 
 console.log("LINE 6");
 
-
-
-
-
-console.log("start")
+console.log("start");
 
 setTimeout(() => {
-    console.log("middle"), 0}
-);
+  console.log("middle"), 0;
+});
 
-console.log("end")
+console.log("end");
+
+// Imagine making tea, but each step requires confirmation before moving on:
+
+// Boil water
+
+// → when done, add tea leaves
+
+// → after a few minutes, add sugar and milk
+
+// → then, pour into cup
+
+// 1. What is Callback Hell/Pyramid of Doom/Christmas Tree of Callbacks?
+// Callback Hell refers to a situation in JavaScript where multiple asynchronous functions are nested inside each other, forming a deep pyramid-like structure of code.
+
+// This pattern appears when each callback performs an asynchronous task and passes the result to another callback, leading to deeply nested and hard-to-read code.
+
+// 2. Why does Callback Hell happen?
+// JavaScript is:
+
+// Single-threaded (one task at a time),
+
+// And asynchronous (can handle tasks like API calls, timeouts, or reading files without blocking other operations).
+
+// To deal with async tasks, JavaScript initially used callbacks, which are functions passed as arguments to be executed later.
+
+// When tasks are dependent on each other, like:
+
+// Step 2 needs the result of Step 1,
+
+// Step 3 needs the result of Step 2,
+
+// ...we end up nesting callbacks inside callbacks.
+
+step1(function (result1) {
+  step2(result1, function (result2) {
+    step3(result2, function (result3) {
+      step4(result3, function (result4) {
+        // and it continues...
+      });
+    });
+  });
+});
+
+// 5. Problems with Callback Hell:
+// Difficult to read & debug.
+
+// Error handling is complex.
+
+// Code is not modular.
+
+// 🔁 2. Promises
+// A Promise is an object that represents the eventual completion or failure of an asynchronous operation.
+
+// 2. Why use Promises?
+// To avoid nested callbacks.
+
+// To write more readable and manageable asynchronous code.
+
+// if(){
+//     if(){
+
+//     }
+// }
+
+// 3. Promise States:
+// Pending: Initial state.
+
+// Fulfilled: Operation completed successfully.
+
+// Rejected: Operation failed.
+
+const promise = new Promise((resolve, reject) => {
+  if (sucess) {
+    resolve("data recived");
+  } else {
+    reject("error occured");
+  }
+});
+
+promise.then((data) => console.log(data)).catch((err) => console.log(err));
+
+// 6. Real-life Analogy:
+//     You order food from Zomato. A promise is like: "We’ll deliver it soon." You can handle the outcome when it’s delivered (then) or if there’s a delivery issue (catch).
+
+// ⚡ 3. Async / Await
+// 1. What is async/await?
+// Syntactic sugar over Promises.
+
+// Allows writing asynchronous code that looks like synchronous code.
+
+// 2. Why use it?
+// Code becomes clean, readable.
+
+// Easier to debug.
+
+// Looks synchronous but works asynchronously.
+
+// bread -> butter -> jam
+// sigup -> login -> like/comment
+
+// function getBread(cb) {
+//   setTimeout(() => {
+//     console.log("Got the bread");
+//     cb();
+//   }, 4000);
+// }
+// function addButter(cb) {
+//   setTimeout(() => {
+//     console.log("add the butter");
+//     cb();
+//   }, 1000);
+// }
+// function addJam(cb) {
+//   setTimeout(() => {
+//     console.log("add the jam");
+//     cb();
+//   }, 1000);
+// }
+
+// getBread(() => {
+//     addButter(()=>{
+//         addJam(() => {
+//             console.log("Sandwithc is ready")
+//         })
+//     })
+// })
+
+function getBread() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Got the bread");
+      resolve();
+    }, 4000);
+  });
+}
+function addButter() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Got the bread");
+      resolve();
+    }, 4000);
+  });
+}
+function addJam() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Got the bread");
+      resolve();
+    }, 4000);
+  });
+}
 
 
+// getBread()
+//     .then(addButter)
+//     .then(addJam)
+//     .then(()=>console.log("sandwich is ready"))
 
 
-
+async function makeSandwich() {
+    await getBread();
+    await addButter();
+    await addJam();
+    console.log("Sandwich is ready! 🥪🧈🍓");
+  }
+  
+  makeSandwich();
 
 

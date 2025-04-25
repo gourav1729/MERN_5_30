@@ -1,19 +1,8 @@
-console.log("LINE 1")
-
-function hello(){
-    console.log("LINE 5"); 
-   
-}
-
-console.log("LINE 2")
-
-function demo(){
-    console.log("LINE 4")
-    hello();
-}
-
-console.log("LINE 3")
-
-demo()
-
-console.log("LINE 6");
+async function makeSandwich() {
+    await getBread();
+    await addButter();
+    await addJam();
+    console.log("Sandwich is ready! 🥪🧈🍓");
+  }
+  
+  makeSandwich();
