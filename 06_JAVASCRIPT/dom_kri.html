@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <style>
+        #section{  width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>This is a toggle</h3>
+    <div id="section">Toggle my color</div>
+    <button onclick="toggleBackground()">Toggle Background</button>
+
+    <script>
+        let toggled=false;
+        function toggleBackground(){   
+            const section=document.getElementById('section')
+            if(toggled){
+                section.style.backgroundColor='white'
+                section.style.color = '#000';
+
+            }
+            else{
+                section.style.backgroundColor='black'
+                section.style.color = '#fff';
+
+            }
+            toggled= !toggled;
+      
+    }
+    </script>
+</body>
+</html>

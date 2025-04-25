@@ -1,7 +1,19 @@
- let arrz = [10, 20, 30, 40, 50, 60, 70]
+console.log("LINE 1")
 
+function hello(){
+    console.log("LINE 5"); 
+   
+}
 
-  arrz.forEach((num, index) => {
+console.log("LINE 2")
 
-    console.log(index, num, index)
-  })
+function demo(){
+    console.log("LINE 4")
+    hello();
+}
+
+console.log("LINE 3")
+
+demo()
+
+console.log("LINE 6");

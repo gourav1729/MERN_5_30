@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!--
+
+    event object
+    The event object is an automatically passed object that contains details about the event that just happened — like a click, key press, form submission, mouse movement, etc.
+    
+
+
+Property	            What it Gives You	                       Example Value
+event.type	            Type of event	                           "click"
+event.target	        The element that triggered the event	    <button>
+event.currentTarget	    The element the listener is attached to	    <button>
+event.key	            Key pressed (keyboard events only)	       "a", "Enter"
+event.clientX	        Mouse X position (horizontal)	           143 (px from left)
+event.clientY	        Mouse Y position (vertical)	                234 (px from top)
+    
+    -->
+
+
+
+    <button id="btn">Click me</button>
+
+
+    <script>
+
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener("click", function(event) {
+            console.log(event)
+            
+        })
+
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

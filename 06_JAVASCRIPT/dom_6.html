@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM: Create, Append, and Remove</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .notification {
+      padding: 10px;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Creating and Removing Elements</h1>
+
+  <div class="container" id="exercise-container">
+    <h2>Exercise 1: Notification</h2>
+    <button onclick="createNotification()">Show Notification</button>
+  </div>
+
+  <div class="container" id="toggle-container">
+    <h2>Exercise 2: Toggle Element</h2>
+    <button onclick="toggleElement()">Toggle Message</button>
+  </div>
+
+ 
+
+  <script>
+    // ==============================
+    // Exercise 1: Create Notification
+    // ==============================
+    function createNotification() {
+      const container = document.getElementById('exercise-container');
+      const notification = document.createElement('p');
+      notification.textContent = '✅ You have a new notification!';
+      notification.className = 'notification';
+      container.appendChild(notification);
+    }
+
+    // ==============================
+    // Exercise 2: Toggle Element
+    // ==============================
+    function toggleElement() {
+      const container = document.getElementById('toggle-container');
+      const existing = document.getElementById('toggleMsg');
+
+      if (existing) {
+        existing.remove(); // Remove if it exists
+      } else {
+        const msg = document.createElement('div');
+        msg.textContent = '👋 Hello! I am toggled!';
+        msg.id = 'toggleMsg';
+        msg.className = 'notification';
+        container.appendChild(msg);
+      }
+    }
+
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- What are DOM Events? DOM events are notifications sent to JavaScript when something happens to HTML elements, such as a mouse click, a key press, or a form submission.  -->
+
+<!-- 
+click
+dblclick
+mouseover
+mouse
+mouseout
+keydown
+keyup
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>using addEventListner</h2>
+    <button id="listenBtn">Click me</button>
+
+
+
+    <!-- Allows multiple events on the same element.
+     element.addEventListener("event", handlerFunction)
+
+
+Option	                      Use Case	                                           Should You Prefer It?
+Inline (onclick)	          Quick demos, small projects, beginners	           ❌ Not preferred in real projects
+element.onclick = function	  Slightly better, but still limits flexibility	       ⚠️ Okay, but still limited
+addEventListener()	          Clean, scalable, supports multiple listeners	      ✅ ✅ ✅ YES! Best practice
+
+Using onclick, only one function can be assigned — the new one overwrites the old.
+
+mouseover
+mouseout
+
+     
+     
+    -->
+
+
+    <script>
+        const button = document.getElementById("listenBtn")
+
+        button.addEventListener("mouseover", () => button.style.backgroundColor = "red")
+        button.addEventListener("mouseout", () => button.style.backgroundColor = "yellow")
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
