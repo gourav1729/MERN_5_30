@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster Pro - Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>TypeMaster<span class="pro-badge">Pro</span></h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Practice</a></li>
+                <li><a href="#" id="leaderboardLink">Leaderboard</a></li>
+                <li><a href="#" id="profileLink">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn" class="btn btn-outline">Login</button>
+            <button id="signupBtn" class="btn">Sign Up</button>
+            <div class="user-profile hidden">
+                <span id="username">User</span>
+                <button id="logoutBtn" class="btn btn-small">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="testContainer">
+        <h1>Improve Your Typing Speed</h1>
+        
+        <div class="test-settings">
+            <div class="setting">
+                <label>Difficulty:</label>
+                <select id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="expert">Expert</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label>Time (seconds):</label>
+                <select id="timeSelect">
+                    <option value="30">30</option>
+                    <option value="60" selected>60</option>
+                    <option value="120">120</option>
+                    <option value="300">300</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label>Theme:</label>
+                <select id="themeSelect">
+                    <option value="light" selected>Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="focus">Focus Mode</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <p>Time: <span id="timer">60</span>s</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <p>WPM: <span id="wpm">0</span></p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-bullseye"></i>
+                <p>Accuracy: <span id="accuracy">0</span>%</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-keyboard"></i>
+                <p>Keystrokes: <span id="keystrokes">0</span></p>
+            </div>
+        </div>
+        
+        <div class="text-display" id="textDisplay"></div>
+        
+        <textarea 
+            id="textInput" 
+            class="text-input" 
+            placeholder="Start typing when ready..."
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            disabled
+        ></textarea>
+        
+        <div class="button-group">
+            <button id="startBtn" class="btn btn-primary">Start Test</button>
+            <button id="resetBtn" class="btn btn-secondary" disabled>Reset</button>
+            <button id="shareBtn" class="btn btn-outline" disabled>
+                <i class="fas fa-share-alt"></i> Share Result
+            </button>
+        </div>
+    </div>
+    
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Leaderboard</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="leaderboard-filter">
+                    <select id="leaderboardTimeFilter">
+                        <option value="daily">Daily</option>
+                        <option value="weekly" selected>Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="alltime">All Time</option>
+                    </select>
+                    <select id="leaderboardDifficultyFilter">
+                        <option value="all" selected>All Difficulties</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>User</th>
+                            <th>WPM</th>
+                            <th>Accuracy</th>
+                            <th>Difficulty</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody">
+                        <!-- Will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <p class="form-footer">Don't have an account? <a href="#" id="showSignupBtn">Sign up</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="signupUsername">Username</label>
+                        <input type="text" id="signupUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPasswordConfirm">Confirm Password</label>
+                        <input type="password" id="signupPasswordConfirm" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                    <p class="form-footer">Already have an account? <a href="#" id="showLoginBtn">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Test Results</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="results-container">
+                    <div class="result-item">
+                        <h3>Words Per Minute</h3>
+                        <div class="result-value" id="resultWpm">0</div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Accuracy</h3>
+                        <div class="result-value" id="resultAccuracy">0%</div>
+                    </div>
+                    <div class="result-item">
+                        <h3>Characters</h3>
+                        <div class="result-value">
+                            <span id="resultCorrectChars">0</span> / <span id="resultTotalChars">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-analysis">
+                    <h3>Analysis</h3>
+                    <p id="resultAnalysis">Great job! Your typing speed is above average.</p>
+                </div>
+                <div class="result-actions">
+                    <button id="saveResultBtn" class="btn btn-primary">Save Result</button>
+                    <button id="tryAgainBtn" class="btn btn-secondary">Try Again</button>
+                    <button id="resultShareBtn" class="btn btn-outline">
+                        <i class="fas fa-share-alt"></i> Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TypeMaster Pro</h3>
+                <p>Improve your typing speed and accuracy with our professional typing test application.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Premium Features</h3>
+                <ul>
+                    <li>Detailed Analytics</li>
+                    <li>Custom Text Practice</li>
+                    <li>Keyboard Heatmap</li>
+                    <li>No Advertisements</li>
+                </ul>
+                <button class="btn btn-small">Upgrade Now</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TypeMaster Pro. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
