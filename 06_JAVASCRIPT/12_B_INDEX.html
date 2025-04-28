@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="dog"></div>
+
+    <script>
+      // Callback function to handle the result after fetching data
+      function getData(callback) {
+        console.log("DATA IS COMMING");
+
+        fetch("https://dog.ceo/api/breeds/image/random")
+          .then((response) => response.json()) //parse json response
+          .then((data) => {
+            callback(null, data); // Pass data to callback
+          })
+          .catch((error) => {
+            callback(error, null); // Pass error to callback
+          });
+      }
+
+      // Callback function to process the result or error
+      function handleData(error, data) {
+        if (error) {
+          console.log("Error:", error);
+        } else {
+          console.log(data);
+          document.getElementById("dog").innerHTML = `
+            <img src="${data.message}" alt="dog image" />`;
+        }
+      }
+
+      // Calling getData with handleData as a callback
+      getData(handleData);
+    </script>
+  </body>
+</html>

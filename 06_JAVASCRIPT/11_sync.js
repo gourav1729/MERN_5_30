@@ -1,9 +1,40 @@
 console.log("Hello World 1");
 console.log("Hello World 2");
 console.log("Hello World 3");
-console.log("Hello World 4");
+
+
+// code : 10 sec  // 
+
+
+console.log("Hello World 4");  // 50 sec 
 console.log("Hello World 5");
 console.log("Hello World 6");
+
+
+// 5 
+
+
+setTimeout(()=> {
+  console.log("hello 1")
+}, 1000)
+setTimeout(()=> {
+  console.log("hello 2")
+}, 5000)
+setTimeout(()=> {
+  console.log("hello 3")
+}, 3000)
+setTimeout(()=> {
+  console.log("hello 4")
+}, 1000)
+
+
+// data -> 
+
+
+
+
+
+
 
 // kuch code
 // aisa code jo time lega()
@@ -123,6 +154,8 @@ step1(function (result1) {
 //     }
 // }
 
+// 
+
 // 3. Promise States:
 // Pending: Initial state.
 
@@ -186,45 +219,165 @@ promise.then((data) => console.log(data)).catch((err) => console.log(err));
 //     })
 // })
 
+// function getBread() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("Got the bread");
+//       resolve();
+//     }, 4000);
+//   });
+// }
+// function addButter() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("Got the bread");
+//       resolve();
+//     }, 4000);
+//   });
+// }
+// function addJam() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("Got the bread");
+//       reject();
+//     }, 4000);
+//   });
+// }
+
+
+// // getBread()
+// //     .then(addButter)
+// //     .then(addJam)
+// //     .then(()=>console.log("sandwich is ready"))
+
+
+// async function makeSandwich() {
+//     await getBread();
+//     await addButter();
+//     await addJam();
+//     console.log("Sandwich is ready! 🥪🧈🍓");
+//   }
+  
+//   makeSandwich();
+
+
+
 function getBread() {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Got the bread");
-      resolve();
+      const success = Math.random() > 0.2;
+      if (success) {
+        console.log("Got the bread");
+        resolve();
+      } else {
+        reject("Failed to get the bread 🥖❌");
+      }
     }, 4000);
   });
 }
+
 function addButter() {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Got the bread");
-      resolve();
+      const success = Math.random() > 0.2;
+      if (success) {
+        console.log("Added butter");
+        resolve();
+      } else {
+        reject("Failed to add butter 🧈❌");
+      }
     }, 4000);
   });
 }
+
 function addJam() {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Got the bread");
-      resolve();
+      const success = Math.random() > 0.2;
+      if (success) {
+        console.log("Added jam");
+        resolve();
+      } else {
+        reject("Failed to add jam 🍓❌");
+      }
     }, 4000);
   });
 }
-
-
-// getBread()
-//     .then(addButter)
-//     .then(addJam)
-//     .then(()=>console.log("sandwich is ready"))
-
 
 async function makeSandwich() {
+  try {
     await getBread();
     await addButter();
     await addJam();
     console.log("Sandwich is ready! 🥪🧈🍓");
+  } catch (error) {
+    console.log("Error while making sandwich:", error);
   }
-  
-  makeSandwich();
+}
+
+makeSandwich();
 
 
+
+// function getBread(successCallback, errorCallback) {
+//   setTimeout(() => {
+//     const success = Math.random() > 0.2;
+//     if (success) {
+//       console.log("Got the bread");
+//       successCallback();
+//     } else {
+//       errorCallback("Failed to get the bread 🥖❌");
+//     }
+//   }, 4000);
+// }
+
+// function addButter(successCallback, errorCallback) {
+//   setTimeout(() => {
+//     const success = Math.random() > 0.2;
+//     if (success) {
+//       console.log("Added butter");
+//       successCallback();
+//     } else {
+//       errorCallback("Failed to add butter 🧈❌");
+//     }
+//   }, 4000);
+// }
+
+// function addJam(successCallback, errorCallback) {
+//   setTimeout(() => {
+//     const success = Math.random() > 0.2;
+//     if (success) {
+//       console.log("Added jam");
+//       successCallback();
+//     } else {
+//       errorCallback("Failed to add jam 🍓❌");
+//     }
+//   }, 4000);
+// }
+
+// function makeSandwich() {
+//   getBread(
+//     () => {
+//       addButter(
+//         () => {
+//           addJam(
+//             () => {
+//               console.log("Sandwich is ready! 🥪🧈🍓");
+//             },
+//             (error) => {
+//               console.log("Error while adding jam:", error);
+//             }
+//           );
+//         },
+//         (error) => {
+//           console.log("Error while adding butter:", error);
+//         }
+//       );
+//     },
+//     (error) => {
+//       console.log("Error while getting bread:", error);
+//     }
+//   );
+// }
+
+// makeSandwich();

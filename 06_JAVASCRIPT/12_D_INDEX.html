@@ -14,24 +14,17 @@
 
         try {
           let response = await fetch("https://dog.ceo/api/breeds/image/random");
-          let parsedata = await response.json();
+          let parsedata = await response.json(); // Parse the JSON response
           console.log(parsedata);
 
           document.getElementById("dog").innerHTML = `
-        <img src = ${parsedata.message} alt="hello">`;
+            <img src="${parsedata.message}" alt="dog image" />`;
         } catch (error) {
-          console.log("error", error);
+          console.log("Error:", error); // Catch and log any error
         }
       }
 
       getData();
-
-    //   fetch("https://dog.ceo/api/breeds/image/random")
-    //     .then((response) => response.json()) //parse json response
-    //     .then((data) => console.log(data))
-    //     .catch((error) => console.log("Error", error));
     </script>
   </body>
 </html>
-
-
