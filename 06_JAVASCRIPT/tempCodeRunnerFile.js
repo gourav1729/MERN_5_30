@@ -1,22 +1,15 @@
-fetch("https://dog.ceo/api/breeds/image/random")
-    .then((response) => response.json())
-    .then((data)=> console.log(data))
-    .catch((error)=>console.log("Error", error))
+function counter() {
+  let count = 0;
 
-fetch("https://dog.ceo/api/breeds/image/random")
-    .then((response) => response.json())
-    .then((data)=> console.log(data))
-    .catch((error)=>console.log("Error", error))
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
 
-fetch("https://dog.ceo/api/breeds/image/random")
-    .then((response) => response.json())
-    .then((data)=> console.log(data))
-    .catch((error)=>console.log("Error", error))
-
-fetch("https://dog.ceo/api/breeds/image/random")
-    .then((response) => response.json())
-    .then((data)=> console.log(data))
-    .catch((error)=>console.log("Error", error))
-
-
-
+const increment = counter();
+increment()
+increment()
+increment()
+increment()
+increment()

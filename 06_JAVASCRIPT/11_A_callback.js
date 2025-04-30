@@ -3,7 +3,7 @@ function stepOne(callback) {
     console.log("Signup completed");
 
     callback();
-  }, 1000);
+  }, 10000);
 }
 function stepTWO(callback) {
   setTimeout(() => {
@@ -27,4 +27,18 @@ stepOne(()=> {
         })
     })
 })
+
+
+// setTimeout(() => {
+//   console.log("1 LIke/comment completed");
+
+// }, 1000);
+// setTimeout(() => {
+//   console.log("2 LIke/comment completed");
+
+// }, 7000);
+// setTimeout(() => {
+//   console.log("3LIke/comment completed");
+
+// }, 5000);
 
